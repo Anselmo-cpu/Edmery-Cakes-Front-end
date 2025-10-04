@@ -242,7 +242,7 @@ footer .redes a:hover {
     box-shadow: 0 0 10px rgba(31,59,87,0.2);
 }
 
-/* Estilo para separar los items de pedido */
+/* Estilo para separar los items de pedido con iconos */
 .pedido-info p {
     background-color: var(--rosa-pastel);
     padding: 12px 15px;
@@ -250,12 +250,36 @@ footer .redes a:hover {
     margin-bottom: 10px;
     color: var(--azul-oscuro);
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espacio entre icono y texto */
+    font-size: 1.1rem;
 }
+
 .pedido-buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+}
+
+/* Main de pedidos más llamativo */
+.pedido-main {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.pedido-title {
+    font-size: 3.8rem; /* título más grande */
+    color: var(--rosa-fuerte);
+    margin-bottom: 25px;
+}
+
+.pedido-intro {
+    font-size: 1.5rem; /* párrafo más grande */
+    color: var(--azul-oscuro);
+    line-height: 1.8;
+    margin-bottom: 50px;
 }
 
 
