@@ -242,6 +242,23 @@ footer .redes a:hover {
     box-shadow: 0 0 10px rgba(31,59,87,0.2);
 }
 
+/* Estilo para separar los items de pedido */
+.pedido-info p {
+    background-color: var(--rosa-pastel);
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: var(--azul-oscuro);
+    font-weight: bold;
+}
+.pedido-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     header {
@@ -259,3 +276,5 @@ footer .redes a:hover {
         align-items: center;
     }
 }
+
+

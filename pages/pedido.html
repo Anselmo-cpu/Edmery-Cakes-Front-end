@@ -1,44 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edmery Cakes - contactanos</title>
+    <title>Edmery Cakes - Pedidos</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <header>     <!-- Header: Menú y Logo -->
-        <div class="logo">
-            <img src="img/logo.png" alt="Edmery Cakes">
-        </div>
 
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../assets/Logo-Color.jpg" alt="Edmery Cakes"></a>
+        </div>
         <nav class="menu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./catalogo.html">Catalogo</a></li>
-                <li><a href="#">Haz tu pedido</a></li>
-                <li><a href="./nosotros.html"></a>Acerca de nosotros</li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="#" class="activo">Haz tu pedido</a></li>
+                <li><a href="nosotros.html">Acerca de nosotros</a></li>
             </ul>
         </nav>
     </header>
+    |
+   <main class="container">  <!-- Main -->
+    <section class="nosotros-preview">
+        <h1>Mandanos tu pedido</h1>
+        <p>Queremos ayudarte a crear el postre perfecto para tu evento. Por favor, envianos tu pedido a través de nuestros canales de contacto.</p>
+
+        <h2>Información que necesitamos:</h2>
+        <div class="pedido-info">
+            <p><strong>Fecha y hora exacta del evento</strong></p>
+            <p><strong>Cantidad de personas invitadas</strong></p>
+            <p><strong>Temática o foto del diseño</strong></p>
+        </div>
+
+        <h3>Enviá tu pedido aquí:</h3>
+        <div class="pedido-buttons">
+            <a href="https://www.instagram.com/edmerycakes.arg/" target="_blank" class="btn">Instagram</a>
+            <a href="https://wa.me/+5491165675894?text=Hola!,%20quiero%20reservar%20un%20pedido." target="_blank" class="btn">WhatsApp</a>
+        </div>
+    </section>
+</main>
 
 
-    <main>   <!-- Main: Contenido principal de cada pagina (html) -->
-
-    </main>
-
-
-   
-    <!-- Información de contacto y redes -->
-    <footer>       
+    <!-- FOOTER -->
+    <footer>
         <p>&copy; 2025 Edmery Cakes. Todos los derechos reservados.</p>
-
         <div class="redes">
-            <a href="https://www.instagram.com/edmerycakes.arg/">Instagram</a>
-            <a href="https://wa.me/+5491165675894?text=Hola!,%20quiero%20reservar%20un%20pedido."> Reserva tu pedido via whatssap! </a>
+            <a href="https://www.instagram.com/edmerycakes.arg/" target="_blank">Instagram</a>
+            <a href="https://wa.me/+5491165675894?text=Hola!,%20quiero%20reservar%20un%20pedido." target="_blank">WhatsApp</a>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

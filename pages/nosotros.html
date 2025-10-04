@@ -1,45 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Edmery Cakes - nosotros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edmery Cakes - Nosotros</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <header>     <!-- Header: Menú y Logo -->
-        <div class="logo">
-            <img src="img/logo.png" alt="Edmery Cakes">
-        </div>
 
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../assets/Logo-Color.jpg" alt="Edmery Cakes"></a>
+        </div>
         <nav class="menu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./catalogo.html">Catalogo</a></li>
+                <li><a href="./catalogo.html">Catálogo</a></li>
                 <li><a href="./pedido.html">Haz tu pedido</a></li>
-                <li><a href="#"></a>Acerca de nosotros</li>
+                <li><a href="#" class="activo">Acerca de nosotros</a></li>
             </ul>
         </nav>
     </header>
 
-
-    <main>   <!-- Main: Contenido principal de cada pagina (html) -->
-
+    <!-- MAIN -->
+    <main class="container">
+        <section class="nosotros-preview">
+            <h1>Sobre Nosotros</h1>
+            <p>
+                En <strong>Edmery Cakes</strong> creamos momentos dulces que hacen que cada celebración sea inolvidable. 
+                Nuestra pasión por la repostería artesanal nos lleva a trabajar con <strong>ingredientes de primera calidad</strong>, combinando tradición y creatividad en cada torta, cupcake, cookie, icepop o shot que elaboramos. 
+                Cada creación es un reflejo de nuestro compromiso con la excelencia y el amor por los detalles, ofreciendo una amplia variedad de <strong>Cakes, Cookies, Cupcakes, Icepops y Shots</strong> para todos los gustos y ocasiones.
+            </p>
+            <a href="./catalogo.html" class="btn">Ver Catalogo</a>
+        </section>
     </main>
-    
 
-    
-                <!-- Información de contacto y redes -->
-    <footer>       
+    <!-- FOOTER -->
+    <footer>
         <p>&copy; 2025 Edmery Cakes. Todos los derechos reservados.</p>
-
         <div class="redes">
-            <a href="https://www.instagram.com/edmerycakes.arg/">Instagram</a>
-            <a href="https://wa.me/+5491165675894?text=Hola!,%20quiero%20reservar%20un%20pedido."> Reserva via whatssap! </a>
+            <a href="https://www.facebook.com/edmerycakes" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/edmerycakes.arg/" target="_blank">Instagram</a>
+            <a href="https://wa.me/+5491165675894?text=Hola!,%20quiero%20reservar%20un%20pedido." target="_blank">WhatsApp</a>
         </div>
     </footer>
 
-
-    <script src="js/main.js"></script>
+    <!-- JS -->
+    <script src="../js/main.js"></script>
 </body>
 </html>
