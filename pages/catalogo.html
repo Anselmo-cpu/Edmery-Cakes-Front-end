@@ -1,44 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edmery Cakes - Catalogo</title>
+    <title>Catálogo - Edmery Cakes</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <header>     <!-- Header: Menú y Logo -->
-        <div class="logo">
-            <img src="img/logo.png" alt="Edmery Cakes">
-        </div>
 
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assets/Logo-Color.jpg" alt="Edmery Cakes"></a>
+        </div>
         <nav class="menu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="#">Catalogo</a></li>
-                <li><a href="./pedido.html">Haz tu pedido</a></li>
-                <li><a href="./nosotros.html"></a>Acerca de nosotros</li>
+                <li><a href="catalogo.html" class="activo">Catálogo</a></li>
+                <li><a href="pedido.html">Haz tu pedido!</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- MAIN -->
+    <main>
+        <section class="container">
 
-    <main>   <!-- Main: Contenido principal de cada pagina (html) -->
+            <h1>Catálogo de Productos</h1>
 
+            <!-- Buscador -->
+            <div class="buscador">
+                <input type="text" id="buscador" placeholder="Buscar productos...">
+            </div>
+
+            <!-- Productos -->
+            <div class="productos-destacados">
+                <div class="productos-grid" id="productos">
+                    <div class="producto-card">
+                        <img src="assets/producto1.jpg" alt="Torta de Chocolate">
+                        <h3>Cakes</h3>
+                        <p>Bizcochuelo húmedo con crema de chocolate y dulce de leche.</p>
+                        <a href="postres.html" class="btn">Encargar</a>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="assets/producto2.jpg" alt="Cheesecake Frutilla">
+                        <h3>Cupcakes</h3>
+                        <p>Base de galleta crocante con crema suave y cobertura frutal.</p>
+                        <a href="postres.html" class="btn">Encargar</a>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="assets/producto3.jpg" alt="Torta Oreo">
+                        <h3>Icepops</h3>
+                        <p>Combinación irresistible de galletas Oreo y crema chantilly.</p>
+                        <a href="postres.html" class="btn">Encargar</a>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="assets/producto4.jpg" alt="Tiramisú">
+                        <h3>Cookies</h3>
+                        <p>Deliciosa receta italiana con café y cacao.</p>
+                        <a href="postres.html" class="btn">Encargar</a>
+                    </div>
+
+                    <div class="producto-card">
+                        <img src="assets/producto1.jpg" alt="Tiramisú">
+                        <h3>Shots</h3>
+                        <p>Deliciosa receta italiana con café y cacao.</p>
+                        <a href="postres.html" class="btn">Encargar</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
 
-
-   
-                <!-- Información de contacto y redes -->
-    <footer>       
+    <!-- FOOTER -->
+    <footer>
         <p>&copy; 2025 Edmery Cakes. Todos los derechos reservados.</p>
-
         <div class="redes">
             <a href="https://www.instagram.com/edmerycakes.arg/">Instagram</a>
-            <a href="https://wa.me/+5491165675894?text=Hola!,%20quiero%20reservar%20un%20pedido."> Reserva tu pedido via whatssap! </a>
+            <a href="https://wa.me/+5491165675894?text=Hola!,%20quiero%20reservar%20un%20pedido.">WhatsApp</a>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- SCRIPT BUSCADOR -->
+    <script>
+        const buscador = document.getElementById("buscador");
+        const productos = document.querySelectorAll(".producto-card");
+
+        buscador.addEventListener("keyup", function(e) {
+            const texto = e.target.value.toLowerCase();
+            productos.forEach(producto => {
+                const nombre = producto.querySelector("h3").textContent.toLowerCase();
+                const descripcion = producto.querySelector("p").textContent.toLowerCase();
+                producto.style.display = (nombre.includes(texto) || descripcion.includes(texto)) ? "block" : "none";
+            });
+        });
+    </script>
+
 </body>
 </html>
