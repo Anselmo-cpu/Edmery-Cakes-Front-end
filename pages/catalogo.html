@@ -88,20 +88,7 @@
         </div>
     </footer>
 
-    <!-- SCRIPT BUSCADOR -->
-    <script>
-        const buscador = document.getElementById("buscador");
-        const productos = document.querySelectorAll(".producto-card");
-
-        buscador.addEventListener("keyup", function(e) {
-            const texto = e.target.value.toLowerCase();
-            productos.forEach(producto => {
-                const nombre = producto.querySelector("h3").textContent.toLowerCase();
-                const descripcion = producto.querySelector("p").textContent.toLowerCase();
-                producto.style.display = (nombre.includes(texto) || descripcion.includes(texto)) ? "block" : "none";
-            });
-        });
-    </script>
-
+    
+        <script src="../js/main.js"></script>
 </body>
 </html>

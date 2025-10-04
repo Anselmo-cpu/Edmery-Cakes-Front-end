@@ -263,23 +263,121 @@ footer .redes a:hover {
     margin-top: 20px;
 }
 
-/* Main de pedidos más llamativo */
+/* MAIN más compacto y visualmente atractivo para pedidos */
 .pedido-main {
+    max-width: 750px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #fff 60%, #f4a7b920);
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
     text-align: center;
-    padding: 80px 20px;
+    border: 2px solid #f4a7b9;
+    position: relative;
+    overflow: hidden;
 }
 
-.pedido-title {
-    font-size: 3.8rem; /* título más grande */
-    color: var(--rosa-fuerte);
-    margin-bottom: 25px;
+/* Títulos */
+.pedido-main h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #1F3B57; /* azul oscuro */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.pedido-intro {
-    font-size: 1.5rem; /* párrafo más grande */
-    color: var(--azul-oscuro);
-    line-height: 1.8;
-    margin-bottom: 50px;
+.pedido-main p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0.8rem 0;
+}
+
+/* Subtítulos */
+.pedido-main h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #E85C7A; /* rosa fuerte */
+    border-bottom: 2px dashed #FFD88F;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.pedido-main h3 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: #1F3B57;
+}
+
+/* Info con íconos */
+.pedido-main .pedido-info {
+    margin-top: 1rem;
+    text-align: left;
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #f4a7b9;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.pedido-main .pedido-info p {
+    font-size: 1rem;
+    margin: 0.6rem 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Botones */
+.pedido-main .pedido-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.pedido-main .btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    background: #E85C7A;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(232, 92, 122, 0.3);
+}
+
+.pedido-main .btn:hover {
+    background: #c04b72;
+    transform: translateY(-2px);
+}
+
+/* Detalle decorativo con estrellitas */
+.pedido-main::before {
+    content: "✨";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+
+.pedido-main::after {
+    content: "🎂";
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 2rem;
+    opacity: 0.4;
+}
+
+/* ===== Decoración de fondo con emojis ===== */
+.emoji-fondo {
+    position: fixed;       /* siempre fijo en la ventana */
+    font-size: 2rem;
+    pointer-events: none;  /* no interfieren con clicks */
+    user-select: none;
+    z-index: 0;            /* detrás de todo */
+    opacity: 0.4;          /* semitransparente */
 }
 
 

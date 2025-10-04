@@ -19,3 +19,47 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const emojis = ["🎂","🍪","🧁","🍫"];
+    const cantidad = 10; // menos cantidad, menos invasivo
+
+    for (let i = 0; i < cantidad; i++) {
+        const span = document.createElement("span");
+        span.className = "emoji-fondo";
+        span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+        // posición inicial aleatoria
+        span.style.top = Math.random() * window.innerHeight + "px";
+        span.style.left = Math.random() * window.innerWidth + "px";
+
+        document.body.appendChild(span);
+
+        // movimiento
+        let dx = (Math.random() - 0.5) * 0.5; // velocidad horizontal
+        let dy = (Math.random() - 0.5) * 0.5; // velocidad vertical
+
+        function mover() {
+            let top = parseFloat(span.style.top);
+            let left = parseFloat(span.style.left);
+
+            top += dy;
+            left += dx;
+
+            // rebote
+            if(top < 0 || top > window.innerHeight - 30) dy *= -1;
+            if(left < 0 || left > window.innerWidth - 30) dx *= -1;
+
+            span.style.top = top + "px";
+            span.style.left = left + "px";
+
+            requestAnimationFrame(mover);
+        }
+
+        mover();
+    }
+});
