@@ -30,6 +30,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     border-bottom: 3px solid var(--rosa-fuerte);
+    position: relative;
 }
 
 header .logo img {
@@ -59,7 +60,30 @@ nav.menu ul li a.activo {
     color: var(--blanco);
 }
 
-/* ===== Main: sección principal ===== */
+/* ===== Buscador ===== */
+.buscador {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid var(--rosa-fuerte);
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.buscador input:focus {
+    border-color: var(--azul-oscuro);
+    box-shadow: 0 0 10px rgba(31,59,87,0.2);
+}
+
+/* ===== Main contenedor ===== */
 .container {
     display: flex;
     flex-direction: column;
@@ -68,6 +92,7 @@ nav.menu ul li a.activo {
     background-color: var(--blanco);
     padding: 80px 20px;
     text-align: center;
+    position: relative;
 }
 
 .container .maintext h1 {
@@ -125,6 +150,7 @@ nav.menu ul li a.activo {
     width: 300px;
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    position: relative;
 }
 
 .producto-card:hover {
@@ -155,11 +181,36 @@ nav.menu ul li a.activo {
     margin-bottom: 15px;
 }
 
-/* ===== Sección nosotros ===== */
+/* Mini emojis decorativos en producto cards */
+.producto-card::before,
+.producto-card::after {
+    content: "🍪🎂🧁";
+    position: absolute;
+    font-size: 1rem;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.producto-card::before {
+    top: 5px;
+    left: 5px;
+}
+
+.producto-card::after {
+    bottom: 5px;
+    right: 5px;
+}
+
+/* ===== Sección Nosotros ===== */
 .nosotros-preview {
     padding: 60px 20px;
     text-align: center;
     background-color: var(--blanco);
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    margin: 20px auto;
+    max-width: 1000px;
+    position: relative;
 }
 
 .nosotros-preview h2 {
@@ -172,6 +223,28 @@ nav.menu ul li a.activo {
     color: #555;
     max-width: 700px;
     margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* Decoración ligera Nosotros */
+.nosotros-preview::before {
+    content: "🎂🧁🍪";
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.03;
+    top: 10%;
+    left: 5%;
+    pointer-events: none;
+}
+
+.nosotros-preview::after {
+    content: "🎂🧁🍪";
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.03;
+    bottom: 10%;
+    right: 5%;
+    pointer-events: none;
 }
 
 /* ===== CTA ===== */
@@ -203,10 +276,17 @@ nav.menu ul li a.activo {
 
 /* ===== Footer ===== */
 footer {
-    background-color: var(--azul-oscuro);
+    background: linear-gradient(90deg, var(--azul-oscuro), var(--rosa-pastel));
+    padding: 40px 20px;
     color: var(--blanco);
     text-align: center;
-    padding: 30px 20px;
+    border-top: 5px solid var(--rosa-fuerte);
+    position: relative;
+}
+
+footer p {
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 footer .redes a {
@@ -219,30 +299,7 @@ footer .redes a:hover {
     text-decoration: underline;
 }
 
-/* ===== Buscador (estilo agregado) ===== */
-.buscador {
-    margin-bottom: 40px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
-.buscador input {
-    width: 100%;
-    padding: 12px 20px;
-    border: 2px solid var(--rosa-fuerte);
-    border-radius: 25px;
-    font-size: 1rem;
-    outline: none;
-    transition: border 0.3s, box-shadow 0.3s;
-}
-
-.buscador input:focus {
-    border-color: var(--azul-oscuro);
-    box-shadow: 0 0 10px rgba(31,59,87,0.2);
-}
-
-/* Estilo para separar los items de pedido con iconos */
+/* ===== Pedido info ===== */
 .pedido-info p {
     background-color: var(--rosa-pastel);
     padding: 12px 15px;
@@ -252,7 +309,7 @@ footer .redes a:hover {
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 10px; /* espacio entre icono y texto */
+    gap: 10px;
     font-size: 1.1rem;
 }
 
@@ -263,7 +320,7 @@ footer .redes a:hover {
     margin-top: 20px;
 }
 
-/* MAIN más compacto y visualmente atractivo para pedidos */
+/* ===== Main pedidos ===== */
 .pedido-main {
     max-width: 750px;
     margin: 2rem auto;
@@ -277,11 +334,10 @@ footer .redes a:hover {
     overflow: hidden;
 }
 
-/* Títulos */
 .pedido-main h1 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    color: #1F3B57; /* azul oscuro */
+    color: #1F3B57;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -292,11 +348,10 @@ footer .redes a:hover {
     margin: 0.8rem 0;
 }
 
-/* Subtítulos */
 .pedido-main h2 {
     margin-top: 2rem;
     font-size: 1.5rem;
-    color: #E85C7A; /* rosa fuerte */
+    color: #E85C7A;
     border-bottom: 2px dashed #FFD88F;
     display: inline-block;
     padding-bottom: 0.3rem;
@@ -308,7 +363,6 @@ footer .redes a:hover {
     color: #1F3B57;
 }
 
-/* Info con íconos */
 .pedido-main .pedido-info {
     margin-top: 1rem;
     text-align: left;
@@ -327,7 +381,6 @@ footer .redes a:hover {
     gap: 8px;
 }
 
-/* Botones */
 .pedido-main .pedido-buttons {
     margin-top: 2rem;
     display: flex;
@@ -351,7 +404,7 @@ footer .redes a:hover {
     transform: translateY(-2px);
 }
 
-/* Detalle decorativo con estrellitas */
+/* Decorativos pedidos */
 .pedido-main::before {
     content: "✨";
     position: absolute;
@@ -370,15 +423,100 @@ footer .redes a:hover {
     opacity: 0.4;
 }
 
-/* ===== Decoración de fondo con emojis ===== */
-.emoji-fondo {
-    position: fixed;       /* siempre fijo en la ventana */
-    font-size: 2rem;
-    pointer-events: none;  /* no interfieren con clicks */
-    user-select: none;
-    z-index: 0;            /* detrás de todo */
-    opacity: 0.4;          /* semitransparente */
+/* ===== Decoración de fondo para secciones destacadas ===== */
+.seccion-fondo {
+    background: linear-gradient(135deg, #ffffff 0%, #f4a7b920 100%);
+    border-radius: 15px;
+    padding: 60px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
 }
+
+/* Mini emojis decorativos en secciones destacadas */
+.seccion-fondo::before,
+.seccion-fondo::after {
+    content: "🎂🍪🧁";
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+.seccion-fondo::before { top: 5%; left: 5%; }
+.seccion-fondo::after { bottom: 5%; right: 5%; }
+
+
+/* ===== Logo grande y responsive ===== */
+header .logo img {
+    height: 120px; /* tamaño grande por defecto */
+    max-width: 100%;
+}
+
+/* ===== Nav Menu más grande y responsive ===== */
+nav.menu ul li a {
+    font-size: 1.2rem; /* tamaño de fuente más grande */
+    padding: 12px 20px; /* más espacio para que sea más legible */
+}
+
+/* ===== Botones estilo “Nuestro catálogo” ===== */
+.btn {
+    background-color: var(--rosa-fuerte);
+    color: var(--blanco);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--azul-oscuro);
+}
+
+
+@media (max-width: 1024px) {
+    nav.menu ul li a {
+        font-size: 1.1rem;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav.menu ul li a {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav.menu ul li a {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    header .logo img {
+        height: 100px; /* tamaño mediano para pantallas grandes pero no desktop */
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        height: 80px; /* tamaño más pequeño para tablets y móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        height: 60px; /* tamaño pequeño para celulares muy chicos */
+    }
+}
+
+
 
 
 /* ===== Responsive ===== */
@@ -398,5 +536,3 @@ footer .redes a:hover {
         align-items: center;
     }
 }
-
-
