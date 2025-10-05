@@ -475,6 +475,84 @@ nav.menu ul li a {
     background-color: var(--azul-oscuro);
 }
 
+/* ===== Grid Acerca de Nosotros Centrado ===== */
+.grid-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rosa-pastel);
+    padding: 60px 30px;
+    border-radius: 25px;
+    max-width: 1000px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.grid-nosotros .nosotros-texto {
+    background-color: var(--blanco);
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+.grid-nosotros h1 {
+    color: var(--azul-oscuro);
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.grid-nosotros p {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.grid-nosotros .btn {
+    font-size: 1.1rem;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background-color: var(--rosa-fuerte);
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(232, 92, 122, 0.3);
+}
+
+.grid-nosotros .btn:hover {
+    background-color: var(--azul-oscuro);
+    transform: translateY(-2px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .grid-nosotros {
+        padding: 40px 20px;
+    }
+
+    .grid-nosotros .nosotros-texto {
+        padding: 30px 20px;
+    }
+
+    .grid-nosotros h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid-nosotros p {
+        font-size: 1rem;
+    }
+
+    .grid-nosotros .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+
 
 @media (max-width: 1024px) {
     nav.menu ul li a {
