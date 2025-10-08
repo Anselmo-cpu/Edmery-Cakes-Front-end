@@ -9,20 +9,30 @@
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="logo">
-            <a href="../index.html"><img src="../assets/Logo-Color-transparente-2.png" alt="Edmery Cakes"></a>
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="#" class="activo">Postres</a></li>
-                <li><a href="pedido.html">Haz tu pedido</a></li>
-                <li><a href="nosotros.html">Acerca de nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo">
+        <a href="../index.html"><img src="../assets/Logo-Color-transparente-2.png" alt="Edmery Cakes"></a>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Nav con id para JS -->
+    <nav class="menu" id="nav-menu">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="#" class="activo">Postres</a></li>
+            <li><a href="pedido.html">Haz tu pedido</a></li>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+        </ul>
+    </nav>
+</header>
+
 
     <!-- MAIN -->
     <main class="container">
@@ -34,7 +44,7 @@
             </div>
 
         <!-- ===== Sección Cakes ===== -->
-        <section class="productos-destacados">      
+        <section class="productos-destacados" id="cakes">     
             <h2>🍰 Cakes</h2>
             <div class="productos-grid">
                 <div class="producto-card">
@@ -154,7 +164,7 @@
         </section>
 
         <!-- ===== Sección Cupcakes ===== -->
-       <section class="productos-destacados">      
+       <section class="productos-destacados" id="cupcakes-cookies-icepops">      
             <h2>🍪Cookies  - 🧁Cupcakes - 🍧Icepops</h2>
             <div class="productos-grid">
                 
@@ -191,23 +201,37 @@
         </section>
         
         <!-- ===== Sección Shots ===== -->
-                <section class="productos-destacados">      
+        <section class="productos-destacados" id="shots">
             <h2>🥃 Shots</h2>
             <div class="productos-grid">
+
+                <div class="producto-card">
+                    <img src="../assets/b2bba3bf9db7076671d4793c651e3e8c.jpg" alt="Torta para boda">
+                    <h3>Crema con Oreo</h3>
+                    <p>Delicioso <strong>shot de crema</strong> con <strong>Oreo</strong> que combina suavidad y dulzura en cada sorbo. Perfecto para <strong>celebraciones</strong> y para quienes aman los <strong>postres cremosos</strong> con un toque divertido.</p>
+                </div>
+
                 <div class="producto-card">
                     <img src="../assets/shot2.jpg" alt="Torta Perro Realista">
-                    <h3>Shots</h3>
-                    <p></strong> Pequeños, <strong>intensos</strong> y <strong>deliciosos</strong>. Perfectos para <strong>celebrar</strong> cualquier ocasión con un toque <strong>divertido</strong> y <strong>dulce</strong>. ¡Ideales para sorprender a tus invitados en cada brindis!</p>
+                    <h3>Shots frutilla, tiramisú, oreo y más</h3>
+                    <p>Variedad de <strong>shots</strong> irresistibles: <strong>frutilla</strong>, <strong>tiramisu</strong>, <strong>Oreo</strong> y más. Pequeños, <strong>intensos</strong> y <strong>deliciosos</strong>, ideales para sorprender a tus invitados y disfrutar de un <strong>brindis dulce</strong>.</p>
                 </div>
 
                 <div class="producto-card">
                     <img src="../assets/SHOT1.jpg" alt="Torta para boda">
-                    <h3>Shots</h3>
+                    <h3>Shots frutilla, tiramisú, oreo y más</h3>
                     <p></strong> Pequeños pero <strong>llenos de sabor</strong>. Cada <strong>shot</strong> es una <strong>explosión dulce</strong> que hace de cualquier <strong>celebración</strong> un momento <strong>inolvidable</strong>.</p>
                 </div>
-      
+
+                 <div class="producto-card">
+                    <img src="../assets/610606dd3d7c813d724f6f6ac446fb76.jpg" alt="Torta para boda">
+                    <h3>Shot de tres leches</h3>
+                    <p><Irresistible <strong>Shot de Tres Leches</strong>, <strong>suave</strong> y <strong>cremoso</strong>, con el clásico sabor que todos aman. Perfecto para <strong>celebrar</strong> y disfrutar de un <strong>postre dulce</strong> en porciones individuales.</p>
+                </div>
+
             </div>
         </section>
+            <a href="../pages/pedido.html" class="btn">Haz tu pedido</a>
     </main>
 
     <!-- FOOTER -->
