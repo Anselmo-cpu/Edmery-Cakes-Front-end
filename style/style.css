@@ -528,6 +528,8 @@ nav.menu ul li a {
     transform: translateY(-2px);
 }
 
+
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .grid-nosotros {
