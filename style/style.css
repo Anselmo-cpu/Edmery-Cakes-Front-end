@@ -12,14 +12,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Ultra', sans-serif; /* cambiamos la fuente global */
 }
 
 body {
     background-color: var(--blanco);
     color: var(--azul-oscuro);
     line-height: 1.6;
+    font-family: 'Ultra', sans-serif; /* aseguramos que body use Ultra */
 }
+
 
 /* ===== Header ===== */
 header {
